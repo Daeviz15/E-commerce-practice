@@ -6,17 +6,25 @@ const PriceDropdown = () => {
   const nameTag = [
     { name: "Price", options: ["Under $50", "$50 - $100", "$100+"] },
     { name: "Sizes", options: ["xl", "lg", "md", "sm"] },
-    { name: "Labels", options: ["Nike", "Loui Vuitton", "Jordans", "Balenciaga"] },
-    { name: "Locations", options: ["Tokyo", "Australia", "United States", "California"] },
+    {
+      name: "Labels",
+      options: ["Nike", "Loui Vuitton", "Jordans", "Balenciaga"],
+    },
+    {
+      name: "Locations",
+      options: ["Tokyo", "Australia", "United States", "California"],
+    },
     { name: "Gender", options: ["Male", "Female", "Rather not say"] },
+    { name: "Style", options: ["Modern", "Sleek", "Smooth"] },
+
   ];
 
   const toggleDropdown = (index) => {
-    setOpenIndex((prev) => (prev === index ? null : index)); // toggle
+    setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   return (
-    <div className="xl:mx-auto mx-6 mt-5 max-w-6xl flex gap-4 flex-wrap relative">
+    <div className="xl:mx-auto mx-6 mt-5 max-w-6xl md:flex gap-4 grid grid-cols-2 sm:grid-cols-3  justify-center place-items-center md:justify-between">
       {nameTag.map((item, index) => (
         <div key={index} className="relative">
           <button
@@ -27,7 +35,7 @@ const PriceDropdown = () => {
           </button>
 
           {openIndex === index && (
-            <div className="absolute z-10 mt-2 w-40 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+            <div className=" absolute z-10 mt-2 w-40 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="py-1">
                 {item.options.map((option, i) => (
                   <button
