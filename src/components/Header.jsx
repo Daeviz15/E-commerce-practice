@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <div className="bg-green-900 ">
-        <div className=" max-w-6xl mx-auto w-full py-2   flex flex-col md:flex-row md:justify-between items-center text-white text-[13px] font-light">
+        <div className=" max-w-6xl xl:mx-auto mx-6 py-2 md:flex-row md:justify-between flex flex-col items-center  text-white text-[13px] font-light">
           <h1>
             <span>📞</span> +2347044114163
           </h1>

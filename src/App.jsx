@@ -8,11 +8,11 @@ function App() {
 
   return (
     <>
-    <HamPractice/>
-{/* <Header/>
+    {/* <HamPractice/> */}
+<Header/>
 <Nav/>
 <Hero/>
-<PriceDropdown/> */}
+<PriceDropdown/>
     </>
   )
 }
